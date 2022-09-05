@@ -4,7 +4,6 @@ const Logo = () => {
     return (
         <div className={style.logo}>
             <p>Logo</p>
-
         </div>
     );
 };

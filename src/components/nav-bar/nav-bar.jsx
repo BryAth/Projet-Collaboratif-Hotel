@@ -1,16 +1,14 @@
-import style from "./nav-bar.module.css"
-import Logo from "../logo/logo";
-import LoginRegister from "../auth/login-register";
+import LoginRegister from '../auth/login-register';
+import Logo from '../logo/logo';
+import style from './nav-bar.module.css';
 
-
-const Navbar = () => {
+const NavBar = () => {
     return (
         <nav className={style.nav}>
             <Logo />
             <LoginRegister />
-
         </nav>
     );
 };
 
-export default Navbar;
+export default NavBar;
