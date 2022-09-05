@@ -1,12 +1,13 @@
 .logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 25px;
+    margin-top: 25px;
     width: 75px;
     height: 75px;
     background-color: white;
     border: 2px solid rgb(65, 60, 60);
     border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-left: 25px;
     /* box-shadow: 4px 4px 4px rgb(97, 95, 95); */
 }

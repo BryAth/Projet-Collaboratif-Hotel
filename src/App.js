@@ -1,14 +1,19 @@
 
+import { useRoutes } from 'react-router-dom';
+import { routes } from './routes';
+
 import './App.css';
-import NavBar from './components/nav-bar/nav-bar';
-import SearchBar from './components/search-bar/search-bar';
 
 function App() {
+
+  const element = useRoutes(routes);
+
   return (
+
     <div className="App">
-      <NavBar />
-      <SearchBar />
+      {element}
     </div>
+    
   );
 }
 
