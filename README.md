@@ -1,1 +1,1 @@
-# Projet-Collaboratif-Hotel
+# Projet-Collaboratif-Hotel-FRONTEND
