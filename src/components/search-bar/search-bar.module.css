@@ -1,0 +1,17 @@
+.divRecherche {
+    display: flex;
+    justify-content: center;
+
+    position: fixed;
+    top: 150px;
+}
+
+input {
+    height: 50px;
+    width: 300px;
+    background-color: white;
+    color: black;
+    font-size: 1.5rem;
+    margin: 20px;
+}
+
