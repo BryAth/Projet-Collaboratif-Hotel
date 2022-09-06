@@ -1,6 +1,6 @@
 import About from "./pages/about/about";
 import Hotel from "./pages/hotel/hotel";
-import RoomList from "./pages/room/room-list";
+import RoomList from "./pages/room/room";
 import LoginPage from "./pages/login/login-page";
 import Register from "./pages/register/register";
 import NotFound from "./pages/not-found/not-found";

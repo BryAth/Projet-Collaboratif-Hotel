@@ -1,0 +1,37 @@
+.blabla{
+    /* border: 3px solid rgb(83, 83, 83); */
+    width: 500px;
+    height: 500px; 
+    background-color: #D9E2E8;
+    margin: 0%;
+    padding: 0%;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px rgb(97, 97, 97);
+
+}
+
+.description{
+    height: 215px;
+    width: 100%;
+    font-size: 1.2rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 650;
+    margin-left: 15px; 
+    color: #212A30;
+    
+}
+
+p{
+    margin: 0;
+}
+
+img{
+    height: 250px;
+    margin:15px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px rgb(97, 97, 97);
+
+}
+article{
+    color: #212A30;
+}

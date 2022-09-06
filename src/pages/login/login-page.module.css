@@ -19,6 +19,7 @@
     padding: 20px 0 50px;
     border: 1px solid black;
     border-radius: 5px;
+    
 }
 
 .loginContainer input {
@@ -26,6 +27,7 @@
     width: 30vw;
     margin: 10px 0;
     padding: 5px 0 5px 10px;
+    
 }
 
 .loginContainer button {
@@ -35,5 +37,6 @@
     font-size: 1.5rem;
     border-radius: 5px;
     cursor: pointer;
+    
 }
 

@@ -1,0 +1,112 @@
+[
+    {
+        "id" : 101,
+        "nomChambre" : "Suite Présidentielle",
+        "descriptionCourte" : "Les chambres Single (18 m²) sont dotées d'un lit simple, d'une salle de bains en marbre à baignoire, et donnent sur la ville d'Estoril. Une boisson de bienvenue vous est également offerte.",
+        "descriptionLongue" : "Chambres classiques et élégantes, aux détails contemporains et au décor raffiné. Très acceuillantes, elles offrent une sensation de confort intemporel créée  pour des moments spéciaux et un séjour paisible. Les chambres ont entre 20 et 25 m² et donnent dans la ville d'Estoril. Lits simples ou lit double, queen ou king size, salle de bains en marbre, dont certaines avec baignoire et douche séparées.",
+        "hotel" : "Hotel_01",
+        "type" : "Quadruple familiale",
+        "nombrePersonnes" : 4,
+        "prix" : 450,
+        "salleDeBain" : 2,
+        "nombredeWc" : 3,
+        "options" : {
+            "balcon" : "oui",
+            "airConditione" : "oui",
+            "Wifi" : "oui",
+            "miniBar" : "oui",
+            "animaux" : "non",
+            "tv" : "oui",
+            "dejeuner" : "oui",
+            "disponible" : "oui"
+            }
+    },
+    {
+        "id" : 102,
+        "nomChambre" : "Suite Nuptiale",
+        "descriptionCourte" : "Les chambres Single (18 m²) sont dotées d'un lit simple, d'une salle de bains en marbre à baignoire, et donnent sur la ville d'Estoril. Une boisson de bienvenue vous est également offerte.",
+        "descriptionLongue" : "Chambres classiques et élégantes, aux détails contemporains et au décor raffiné. Très acceuillantes, elles offrent une sensation de confort intemporel créée  pour des moments spéciaux et un séjour paisible. Les chambres ont entre 20 et 25 m² et donnent dans la ville d'Estoril. Lits simples ou lit double, queen ou king size, salle de bains en marbre, dont certaines avec baignoire et douche séparées.",
+        "hotel" : "Hotel_01",
+        "type" : "Grand Luxe",
+        "nombrePersonnes" : 2,
+        "prix" : 550,
+        "salleDeBain" : 1,
+        "nombredeWc" : 2,
+        "options" : {
+            "balcon" : true,
+            "airConditione" : true,
+            "Wifi" : true,
+            "miniBar" : true,
+            "animaux" : false,
+            "tv" : true,
+            "dejeuner" : true,
+            "disponible" : false
+            }
+    },
+    {
+        "id" : 103,
+        "nomChambre" : "Familiale",
+        "descriptionCourte" : "Les chambres Single (18 m²) sont dotées d'un lit simple, d'une salle de bains en marbre à baignoire, et donnent sur la ville d'Estoril. Une boisson de bienvenue vous est également offerte.",
+        "descriptionLongue" : "Chambres classiques et élégantes, aux détails contemporains et au décor raffiné. Très acceuillantes, elles offrent une sensation de confort intemporel créée  pour des moments spéciaux et un séjour paisible. Les chambres ont entre 20 et 25 m² et donnent dans la ville d'Estoril. Lits simples ou lit double, queen ou king size, salle de bains en marbre, dont certaines avec baignoire et douche séparées.",
+        "hotel" : "Hotel_01",
+        "type" : "Quadruple familiale",
+        "nombrePersonnes" : 5,
+        "prix" : 500,
+        "salleDeBain" : 3,
+        "nombredeWc" : 3,
+        "options" : {
+            "balcon" : false,
+            "airConditione" : false,
+            "Wifi" : true,
+            "miniBar" : true,
+            "animaux" : false,
+            "tv" : true,
+            "dejeuner" : false,
+            "disponible" : true
+            }
+    },
+    {
+        "id" : 104,
+        "nomChambre" : "Suite Royale",
+        "descriptionCourte" : "Les chambres Single (18 m²) sont dotées d'un lit simple, d'une salle de bains en marbre à baignoire, et donnent sur la ville d'Estoril. Une boisson de bienvenue vous est également offerte.",
+        "descriptionLongue" : "Chambres classiques et élégantes, aux détails contemporains et au décor raffiné. Très acceuillantes, elles offrent une sensation de confort intemporel créée  pour des moments spéciaux et un séjour paisible. Les chambres ont entre 20 et 25 m² et donnent dans la ville d'Estoril. Lits simples ou lit double, queen ou king size, salle de bains en marbre, dont certaines avec baignoire et douche séparées.",
+        "hotel" : "Hotel_03",
+        "type" : "Confort Double",
+        "nombrePersonnes" : 2,
+        "prix" : 650,
+        "salleDeBain" : 1,
+        "nombredeWc" : 2,
+        "options" : {
+            "balcon" : true,
+            "airConditione" : true,
+            "Wifi" : true,
+            "miniBar" : false,
+            "animaux" : false,
+            "tv" : false,
+            "dejeuner" : true,
+            "disponible" : true
+            }
+    },
+    {
+        "id" : 105,
+        "nomChambre" : "Entre potes",
+        "descriptionCourte" : "Les chambres Single (18 m²) sont dotées d'un lit simple, d'une salle de bains en marbre à baignoire, et donnent sur la ville d'Estoril. Une boisson de bienvenue vous est également offerte.",
+        "descriptionLongue" : "Chambres classiques et élégantes, aux détails contemporains et au décor raffiné. Très acceuillantes, elles offrent une sensation de confort intemporel créée  pour des moments spéciaux et un séjour paisible. Les chambres ont entre 20 et 25 m² et donnent dans la ville d'Estoril. Lits simples ou lit double, queen ou king size, salle de bains en marbre, dont certaines avec baignoire et douche séparées.",
+        "hotel" : "Hotel_03",
+        "type" : "mes potes",
+        "nombrePersonnes" : 8,
+        "prix" : 1200,
+        "salleDeBain" : 4,
+        "nombredeWc" : 4,
+        "options" : {
+            "balcon" : false,
+            "airConditione" : true,
+            "Wifi" : false,
+            "miniBar" : true,
+            "animaux" : false,
+            "tv" : true,
+            "dejeuner" : true,
+            "disponible" : true
+            }
+    }
+]

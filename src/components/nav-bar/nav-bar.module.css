@@ -4,5 +4,7 @@
     display: flex;
     height: 120px;
     width: 100%;
-    background-color: rgb(150, 148, 148);
+    background-color: #D9E2E8;
+    box-shadow: 5px 5px 5px rgb(97, 97, 97);
+
 }
