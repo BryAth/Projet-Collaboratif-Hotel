@@ -2,8 +2,8 @@ import About from "./pages/about/about";
 import Hotel from "./pages/hotel/hotel";
 import RoomList from "./pages/room/room-list";
 import LoginPage from "./pages/login/login-page";
-import Register from "./pages/register/register";
-import NotFound from "./pages/not-found/not-found";
+import RegisterPage from "./pages/register/register-page";
+import NotFound from "./pages/errors/not-found";
 
 export const routes = [
     {
@@ -28,7 +28,7 @@ export const routes = [
     },
     {
         path: 'enregistrement',
-        element: <Register />    
+        element: <RegisterPage />    
     },
     {
         path: '*',

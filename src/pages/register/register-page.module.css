@@ -1,5 +1,4 @@
-
-.loginContainer {
+.registerContainer {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -10,7 +9,7 @@
     
 }
 
-.loginContainer form {
+.registerContainer form {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -21,19 +20,18 @@
     border-radius: 5px;
 }
 
-.loginContainer input {
+.registerContainer input {
     font-size: 1rem;
     width: 30vw;
     margin: 10px 0;
     padding: 5px 0 5px 10px;
 }
 
-.loginContainer button {
-    margin: 30px 0;
+.registerContainer button {
+    margin-top: 30px;
     width: 200px;
     height: 50px;
     font-size: 1.5rem;
     border-radius: 5px;
     cursor: pointer;
 }
-

@@ -5,6 +5,7 @@ const LoginRegister = () => {
     return (
         <div className={style.divLogin}>
             <Link to="/connexion"><button className={style.loginButton}>Login</button></Link>
+            <button className={style.loginButton}>Logout</button>
             
         </div>
     );
