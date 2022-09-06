@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import Logo from '../../components/logo/logo';
 import style from './login-page.module.css';
 
@@ -12,7 +13,7 @@ const LoginPage = () => {
                     <h1>Login</h1>
                     <input type="text" placeholder="Email" />
                     <input type="text" placeholder="Mot de passe" />
-                    <button>S'inscrire</button>
+                    <Link to='/enregistrement'><button>S'inscrire</button></Link>
                 </article>
             </div>
         </>
