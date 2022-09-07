@@ -51,14 +51,9 @@ const LoginPage = () => {
                     {/* <input type="text" placeholder="Mot de passe" value={password} onChange={e => setPassword(e.target.value)} /> */}
                     <input id="credential" type="text" placeholder="Pseudo ou Email" {...register('credential')} />
                     <input id="password" type="password" placeholder="Mot de passe"  {...register('password')} />
-<<<<<<< HEAD
-                    <Link to ='/a-propos'><button type="submit">Connexion</button></Link>
-                    <Link to='/enregistrement' className={style.inscription}>S'inscrire</Link>
-=======
                     {/* <Link to ='/a-propos'><button type="submit">Connexion</button></Link> */}
                     <button type="submit">Connexion</button>
                     <Link to='/enregistrement'>S'inscrire</Link>
->>>>>>> carole
 
                     {errorMsg && (
                         <p>{errorMsg}</p>
