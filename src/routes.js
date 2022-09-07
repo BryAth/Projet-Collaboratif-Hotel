@@ -23,6 +23,10 @@ export const routes = [
         path: 'chambres',
         element: <RoomList />   
     },
+    // {
+    //     path: 'description/:id',
+    //     element: <RoomDescription />   
+    // },
     {
         path: 'description/:id',
         //dans votre <Link to ='/description/${id}'> 

@@ -1,6 +1,7 @@
 import { createReducer } from '@reduxjs/toolkit';
 import { loginUser, registerUser, logoutUser } from '../actions/auth-action';
 
+
 const initialState = {
     isConnected: false,
     token: null,
@@ -13,11 +14,13 @@ const authReducer = createReducer(initialState, (builder) => {
             state.isConnected = true;
             state.token = action.payload;       // payload -> response.data.token
             state.errorMsg = null;
+            
         })
         .addCase(loginUser.fulfilled, (state, action) => {
             state.isConnected = true;
             state.token = action.payload;
             state.errorMsg = null;
+            
         })
         .addCase(registerUser.rejected, (state, action) => {
             state.errorMsg = 'Veuillez remplir toutes les données necessaires';

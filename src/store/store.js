@@ -1,10 +1,11 @@
 import { configureStore } from '@reduxjs/toolkit';
 import authReducer from './reducers/auth-reducer';
-
+import hotelReducer from './reducers/hotel-reducer';
 
 const store = configureStore({
     reducer: {
-        auth: authReducer
+        auth: authReducer,
+        hotels: hotelReducer
     },
     devTools: process.env.NODE_ENV !== 'production'
     // préciser la variable d'environnement ->  dev  

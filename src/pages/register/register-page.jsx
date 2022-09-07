@@ -45,6 +45,7 @@ const RegisterPage = () => {
                     <input id="phone" type="text" placeholder="Téléphone" {...register('phone')} />
                     <input id="password" type="text" placeholder="Mot de passe" {...register('password')} />
                     <Link to='/a-propos'><button type="submit">S'inscrire</button></Link>
+                    {/* <button type="submit">S'inscrire</button> */}
 
                     {errorMsg && (
                         <p>{errorMsg}</p>
