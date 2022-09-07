@@ -6,8 +6,6 @@ import { useDispatch } from 'react-redux';
 
 const SearchBar = () => {
 
- 
-
     const { handleSubmit, reset, register } = useForm();
     const dispatch = useDispatch();
 

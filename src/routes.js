@@ -22,6 +22,10 @@ export const routes = [
         path: 'chambres',
         element: <RoomList />   
     },
+    // {
+    //     path: 'description/:id',
+    //     element: <RoomDescription />   
+    // },
     {
         path: 'connexion',
         element: <LoginPage />    
