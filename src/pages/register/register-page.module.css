@@ -6,6 +6,13 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    background-color: #D9E2E8;
+    color: #212A30;
+    box-shadow: 5px 5px 5px rgb(97, 97, 97);
+    border-radius: 10px;
+    border: none;
+
+
     
 }
 
@@ -16,8 +23,11 @@
     flex-direction: column;
     width: 50vw;
     padding: 20px 0 50px;
-    border: 1px solid black;
+    /* border: 1px solid black; */
     border-radius: 5px;
+    box-shadow: 5px 5px 5px rgb(97, 97, 97);
+    
+    
 }
 
 .registerContainer input {
@@ -25,6 +35,12 @@
     width: 30vw;
     margin: 10px 0;
     padding: 5px 0 5px 10px;
+    border: none;
+    box-shadow: 5px 5px 5px rgb(97, 97, 97);
+
+    border-radius: 5px;
+
+
 }
 
 .registerContainer button {
@@ -34,4 +50,10 @@
     font-size: 1.5rem;
     border-radius: 5px;
     cursor: pointer;
+    border: none;
+    box-shadow: 5px 5px 5px rgb(97, 97, 97);
+    background-color: #ff7f51;
+
+    border-radius: 5px;
+
 }

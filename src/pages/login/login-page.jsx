@@ -39,7 +39,7 @@ const LoginPage = () => {
                     <input id="email" type="text" placeholder="Email" {...register('email')} />
                     <input id="password" type="password" placeholder="Mot de passe"  {...register('password')} />
                     <Link to ='/a-propos'><button type="submit">Connexion</button></Link>
-                    <Link to='/enregistrement'>S'inscrire</Link>
+                    <Link to='/enregistrement' className={style.inscription}>S'inscrire</Link>
 
                     {errorMsg && (
                         <p>{errorMsg}</p>

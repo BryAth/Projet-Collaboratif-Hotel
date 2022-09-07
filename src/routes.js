@@ -4,6 +4,7 @@ import RoomList from "./pages/room/room";
 import LoginPage from "./pages/login/login-page";
 import RegisterPage from "./pages/register/register-page";
 import NotFound from "./pages/errors/not-found";
+import RoomDescription from "./pages/room/room-description";
 
 export const routes = [
     {
@@ -21,6 +22,12 @@ export const routes = [
     {
         path: 'chambres',
         element: <RoomList />   
+    },
+    {
+        path: 'description/:id',
+        //dans votre <Link to ='/description/${id}'> 
+        element: <RoomDescription/>,
+        
     },
     {
         path: 'connexion',
