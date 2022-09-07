@@ -7,15 +7,15 @@ import { useEffect,useState} from "react";
 
 const RoomDescription = ({}) => {
 
-    const {id} = useParams()
+    const {idChambre} = useParams()
     const [chambre,setChambre]=useState({})
 // console.log(chambre[1].nomChambre);
     useEffect(()=>{
         setChambre(
-            chambres.find(c=>c.id==id)
+            chambres.find(c=>c.id==idChambre)
             )
         
-    },[id,chambre])
+    },[idChambre,chambre])
 
     return (
         <div className={style.ensembleChambre} >

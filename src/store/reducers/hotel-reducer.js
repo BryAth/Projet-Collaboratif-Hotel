@@ -8,11 +8,10 @@ const initialState = {
 }
 
 const hotelReducer = createReducer(initialState, (builder) => {
-    builder.addCase(
-        setCountry, (state, action) => {
+    builder
+        .addCase(setCountry, (state, action) => {
             state.country = action.payload;
-        }
-    )
+        })
 });
 
 export default hotelReducer;

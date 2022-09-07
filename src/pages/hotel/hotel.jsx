@@ -16,7 +16,7 @@ const Hotel = () => {
 
     const country = useSelector(state => state.hotels.country);
     
-    // TODO: remplacer hotels2 par hotels et supprimer import de hotels des data
+    // TODO: remplacer hotels2 par hotels et supprimer l'import : hotels des data
     const [hotels2, setHotels] = useState([]);     
 
     useEffect(() => {

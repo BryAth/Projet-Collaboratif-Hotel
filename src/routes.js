@@ -19,16 +19,16 @@ export const routes = [
         path: 'hotels',
         element: <Hotel />
     },
-    {
-        path: 'chambres',
-        element: <RoomList />   
-    },
     // {
-    //     path: 'description/:id',
-    //     element: <RoomDescription />   
+    //     path: 'chambres',
+    //     element: <RoomList />   
     // },
     {
-        path: 'description/:id',
+        path: 'chambres/:idHotel',
+        element: <RoomList />   
+    },
+    {
+        path: 'description/:idChambre',
         //dans votre <Link to ='/description/${id}'> 
         element: <RoomDescription/>,
         
