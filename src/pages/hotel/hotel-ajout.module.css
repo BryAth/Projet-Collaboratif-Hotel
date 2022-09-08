@@ -25,6 +25,15 @@
     
 }
 
+.loginContainer label {
+    font-size: 1rem;
+}
+
+.loginContainer article {
+    margin-left: 100px;
+}
+
+
 .loginContainer input {
     font-size: 1rem;
     width: 30vw;

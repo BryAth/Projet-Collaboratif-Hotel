@@ -8,9 +8,15 @@ const SearchBar = () => {
 
     const { handleSubmit, reset, register } = useForm();
     const dispatch = useDispatch();
-
+    
     const handleCountry = (data) => {
+        // console.log(data);
+        // console.log(data.country);
         dispatch(setCountry(data.country));
+        // reset();
+    }
+    const resetCountry = () => {
+        dispatch(setCountry(''));
         reset();
     }
 
@@ -19,6 +25,7 @@ const SearchBar = () => {
             <div className={style.searchDiv}>
                 <input id="country" type="text" placeholder="Pays,Ville..." {...register('country')} />
                 <button type='submit'>Chercher</button>
+                <button type='button' onClick={resetCountry}>Reset</button>
             </div>
         </form>
         

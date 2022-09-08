@@ -1,7 +1,7 @@
 .blabla{
     /* border: 3px solid rgb(83, 83, 83); */
     width: 500px;
-    height: 650px; 
+    height: 700px; 
     background-color: #D9E2E8;
     margin: 0%;
     padding: 0%;
@@ -19,7 +19,6 @@
     font-weight: 650;
     margin-left: 15px; 
     color: #212A30;
-    
     
 }
 
@@ -50,9 +49,10 @@ button {
 .adminButton button {
     background-color: rgba(220, 20, 60, 0.254);
     border-radius: 3px;
+    margin-top: 70px;
 }
 
 .adminButton button:first-of-type {
-    margin-left: 50px;
+    margin-left: 100px;
 }
 
