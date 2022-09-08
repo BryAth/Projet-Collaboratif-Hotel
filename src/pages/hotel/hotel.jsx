@@ -6,16 +6,18 @@ import hotels from '../../data/hotel.json'
 import HotelItem from './hotel-item';
 
 import { useEffect, useState } from 'react';
-import { useSelector } from 'react-redux';
+import {  useSelector } from 'react-redux';
 import axios from 'axios';
 
+import { Link } from 'react-router-dom';
 
 
 const Hotel = () => {
 
 
     const country = useSelector(state => state.hotels.country);
-    
+
+
     // TODO: remplacer hotels2 par hotels et supprimer l'import : hotels des data
     const [hotels2, setHotels] = useState([]);     
 
@@ -40,15 +42,13 @@ const Hotel = () => {
         <div className={style.ensemblehotel} >
             <NavBar />
             <SearchBar />
+            
             <div>
                 <h1 className={style.hotel}>Hôtels</h1>
+                <Link to='/hotelAjout'><button className={style.adminButton}>Ajouter un hôtel</button></Link>
                 <div className={style.hotelframe}>
                     {hotels.map(hotel=><HotelItem  key={hotel.id} {...hotel}/>)}
-                    {hotels.map(hotel=><HotelItem  key={hotel.id} {...hotel}/>)}
-                    {hotels.map(hotel=><HotelItem  key={hotel.id} {...hotel}/>)}
                 </div>
-
-                
             </div>
         </div>
     );

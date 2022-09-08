@@ -32,6 +32,10 @@
 
 .hotelframe::-webkit-scrollbar {
     display: none;
-  }
+}
 
-  
+.adminButton {
+    background-color: rgba(220, 20, 60, 0.254);
+    border-radius: 3px;
+    margin-left: 50px;
+}
