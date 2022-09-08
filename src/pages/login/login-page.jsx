@@ -39,7 +39,7 @@ const LoginPage = () => {
         if (isConnected) {
             navigate('/a-propos');
         }
-    });
+    }, [isConnected, navigate]);
 
     return (
         <>
@@ -50,7 +50,7 @@ const LoginPage = () => {
                     {/* <input type="text" placeholder="Email" value={email} onChange={e => setEmail(e.target.value)} /> */}
                     {/* <input type="text" placeholder="Mot de passe" value={password} onChange={e => setPassword(e.target.value)} /> */}
                     <input id="credential" type="text" placeholder="Pseudo ou Email" {...register('credential')} />
-                    <input id="password" type="password" placeholder="Mot de passe"  {...register('password')} />
+                    <input id="password" type="text" placeholder="Mot de passe"  {...register('password')} />
                     {/* <Link to ='/a-propos'><button type="submit">Connexion</button></Link> */}
                     <button type="submit">Connexion</button>
                     <Link to='/enregistrement'>S'inscrire</Link>

@@ -4,10 +4,11 @@ import NavBar from '../../components/nav-bar/nav-bar';
 import SearchBar from '../../components/search-bar/search-bar';
 // import style from './room-description.module.css'
 import style from '../hotel/hotel.module.css'
-import chambres from '../../data/chambre.json'
+// import chambres from '../../data/chambre.json'
 import RoomItem from './room-item';
 import { useParams } from 'react-router-dom';
 import { useEffect, useState } from 'react';
+import axios from 'axios';
 
 const Room = () => {
     
@@ -17,11 +18,17 @@ const Room = () => {
 
     useEffect(() => {
         // console.log(idHotel);
-        console.log(chambres.filter(c => c.hotel === idHotel));
-        
+        // console.log(chambres.filter(c => c.hotel === idHotel));
         // TODO: requête axios à la place du filter
-        let newList = listChambres.filter(c => c.hotel === idHotel);    
-        setListChambres(newList)
+        // let newList = listChambres.filter(c => c.hotel === idHotel);    
+        // setListChambres(newList)
+
+        axios.get(`http://localhost:8080/api/chambres?hotel=${idHotel}`)
+            .then((response) => {
+                console.log(response);
+                setListChambres(response.data.chambres);
+            })
+    
     }, [idHotel]);
 
     return (
@@ -31,7 +38,7 @@ const Room = () => {
             <div>
                 <h1 className={style.hotel}>Chambres</h1>
                 <div className={style.hotelframe}>
-                    {listChambres.map(chambre=><RoomItem  key={chambre.id} {...chambre}/>)}
+                    {listChambres.map(chambre => <RoomItem  key={chambre._id} {...chambre}/>)}
                 </div>
 
                 

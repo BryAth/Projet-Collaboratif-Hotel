@@ -6,17 +6,19 @@ import { useForm } from 'react-hook-form';
 import axios from 'axios';
 
 import style from './hotel-ajout.module.css';
+import { useNavigate } from 'react-router-dom';
 
 const HotelAjout = () => {
 
-    const { handleSubmit, register, reset } = useForm();
-
+    const { handleSubmit, register } = useForm();
+    const navigate = useNavigate();
     const onRegisterHotel = (data) => {
         console.log(data);    // data contient tout ce qu'il y a dans register
 
         axios.post('http://localhost:8080/api/hotels', data)
             .then(function (response) {
                 console.log(response);
+                navigate('/hotels')
             })
             .catch(function (error) {
                 console.log(error);
@@ -38,9 +40,10 @@ const HotelAjout = () => {
                     <input id="telephone" type="text" placeholder="Numéro de téléphone"  {...register('telephone')} />
                     <input id="email" type="email" placeholder="Email"  {...register('email')} />
                     <input id="nombreChambres" type="text" placeholder="Nombre de chambres"  {...register('nombreChambres')} />
-                    <input id="piscine" type="text" placeholder="Piscine"  {...register('piscine')} />
-                    <input id="voiturier" type="text" placeholder="Voiturier"  {...register('voiturier')} />
-                    <input id="roomService" type="text" placeholder="Room service"  {...register('roomService')} />
+                    {/* <label></label> */}
+                    <input id="piscine" type="checkbox" placeholder="Piscine"  {...register('piscine')} />
+                    <input id="voiturier" type="checkbox" placeholder="Voiturier"  {...register('voiturier')} />
+                    <input id="roomService" type="checkbox" placeholder="Room service"  {...register('roomService')} />
                     <input id="image" type="text" placeholder="URL image"  {...register('image')} />
                     
                     {/* <Link to ='/hotels'><button type="submit">Ajouter</button></Link> */}

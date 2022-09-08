@@ -2,34 +2,30 @@
 // import { useState } from 'react';
 // import { useParams } from 'react-router-dom';
 // import { useSelector } from 'react-redux';
-import hotels from '../../data/hotel.json';
+// import hotels from '../../data/hotel.json';
 // ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 import { Link } from 'react-router-dom';
 import style from './hotel-item.module.css'
-const HotelItem = ({nomHotel,etoiles,adresse,telephone,email,nombreChambres,piscine,voiturier,roomService,image, id}) => {
+import axios from 'axios';
+const HotelItem = ({nomHotel,etoiles,adresse,telephone,email,nombreChambres,piscine,voiturier,roomService,image, _id}) => {
 
     // ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
     // const { idHotel } = useParams();
 
     // const [listHotels, setListHotels] = useState([]);
-    const onDelete = (hotels) => {
-        
-        console.log(id);
-        console.log(hotels);
-        // console.log(hotels.filter(h => h.id === idHotel));
-        
-        // TODO: requête axios à la place du filter
-        // let newList = listHotels.filter(h => h.hotel === idHotel);    
-        // setListHotels(newList)
+    const onDelete = () => {      
+        axios.delete('http://localhost:8080/api/hotels', _id)
+            .then()
+            .catch()
     }
     // ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
     return (
         <article className={style.blabla}>
-            <Link to={`/chambres/${id}`}>
+            <Link to={`/chambres/${_id}`}>
                 <div>
-                    <img src={image} alt="Photo Hotel" />
+                    <img src={image} alt={nomHotel} />
                         <div className={style.description}>
                         <p>{nomHotel}</p>
                         <p>{etoiles} étoiles</p>

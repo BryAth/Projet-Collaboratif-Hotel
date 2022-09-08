@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+
 import Logo from "../../components/logo/logo";
 import style from './register-page.module.css';
 
@@ -7,6 +7,8 @@ import style from './register-page.module.css';
 import { useForm } from 'react-hook-form';
 import { useDispatch, useSelector } from 'react-redux';
 import { registerUser } from '../../store/actions/auth-action';
+import { useNavigate } from "react-router-dom";
+import { useEffect } from "react";
 
 const RegisterPage = () => {
     
@@ -24,6 +26,15 @@ const RegisterPage = () => {
     const { register, handleSubmit,reset } = useForm();
     const dispatch = useDispatch();
     const errorMsg = useSelector(state => state.auth.errorMsg);
+    const navigate = useNavigate();
+    const isConnected = useSelector(state => state.auth.isConnected);
+
+
+    useEffect(() => {
+        if (isConnected) {
+            navigate('/hotels');
+        }
+    }, [isConnected, navigate])
 
     const onRegister = (data) => {
         // console.log('register');
@@ -38,13 +49,14 @@ const RegisterPage = () => {
                 <form onSubmit={handleSubmit(onRegister)}>
                     <h1>Register</h1>
                     {/* <input type="text" placeholder="Nom" value={nom} onChange={e => setNom(e.target.value)} /> */}
-                    <input id="lastName" type="text" placeholder="Nom" {...register('lastName')} />
-                    <input id="firstName" type="text" placeholder="Prénom" {...register('firstName')} />
+                    <input id="pseudo" type="text" placeholder="Pseudo" {...register('pseudo')} />
+                    <input id="lastname" type="text" placeholder="Nom" {...register('lastname')} />
+                    <input id="firstname" type="text" placeholder="Prénom" {...register('firstname')} />
                     <input id="email" type="text" placeholder="Email" {...register('email')} />
                     <input id="country" type="text" placeholder="Pays" {...register('country')} />
                     <input id="phone" type="text" placeholder="Téléphone" {...register('phone')} />
                     <input id="password" type="text" placeholder="Mot de passe" {...register('password')} />
-                    <Link to='/a-propos'><button type="submit">S'inscrire</button></Link>
+                    <button type="submit">S'inscrire</button>
                     {/* <button type="submit">S'inscrire</button> */}
 
                     {errorMsg && (
