@@ -1,7 +1,7 @@
 .blabla{
     /* border: 3px solid rgb(83, 83, 83); */
     width: 500px;
-    height: 500px; 
+    height: 650px; 
     background-color: #D9E2E8;
     margin: 0%;
     padding: 0%;
@@ -23,9 +23,8 @@
     
 }
 
-.description p {
-    margin: 0;
-   
+p{
+    margin: 5px 0 0 15px;
 }
 
 img{
@@ -38,3 +37,22 @@ img{
 article{
     color: #212A30;
 }
+
+button {
+    margin: 20px 0 0 10px;
+}
+
+.adminButton {
+
+    margin-top: 70px;
+}
+
+.adminButton button {
+    background-color: rgba(220, 20, 60, 0.254);
+    border-radius: 3px;
+}
+
+.adminButton button:first-of-type {
+    margin-left: 50px;
+}
+

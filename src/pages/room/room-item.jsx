@@ -12,20 +12,14 @@ const RoomItem= ({image,id,nomChambre,descriptionCourte,descriptionLongue,type,p
             <h3>{nomChambre}</h3>
             <p>{descriptionCourte}</p>
 
-            
-            
-            {/* <p>{etoiles} étoiles</p>
-            <p>Piscine: {piscine}</p>
-            <p>Voiturier: {voiturier}</p>
-            <p>Room service: {roomService}</p>
-        
-            <p>Adresse:  {adresse.pays} {adresse.rue} {adresse.CP} {adresse.num}</p>
-            <p>Tel: {telephone}</p>
-            <p>Email: {email}</p>
-            <p>Nbres chambres : {nombresChambres}</p> */}
+    
+                <p>Adresse:  {adresse.pays} {adresse.rue} {adresse.CP} {adresse.num}</p>
+                <p>Tel: {telephone}</p>
+                <p>Email: {email}</p>
+                <p>Nbres chambres : {nombresChambres}</p>
 
-            </div>
-        </article>
+                </div>
+            </article>
         </Link> 
     );
 };

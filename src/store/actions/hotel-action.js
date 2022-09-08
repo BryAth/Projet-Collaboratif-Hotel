@@ -4,3 +4,6 @@ export const setCountry = createAction('hotel/destination', (country) => ({
     payload : country
 }));
 
+
+
+
