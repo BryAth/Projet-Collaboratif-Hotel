@@ -7,6 +7,7 @@ import NotFound from "./pages/errors/not-found";
 import RoomDescription from "./pages/room/room-description";
 import HotelAjout from "./pages/hotel/hotel-ajout";
 import Reservation from "./pages/reservation/reservation"
+import RoomAjout from "./pages/room/room-ajout";
 
 
 export const routes = [
@@ -22,19 +23,6 @@ export const routes = [
         path: 'hotels',
         element: <Hotel />
     },
-
-    {
-        path: 'reservation',
-        element: <Reservation />
-    },
-    {
-        path: 'chambres',
-        element: <RoomList />   
-    },
-    // {
-    //     path: 'chambres',
-    //     element: <RoomList />   
-    // },
     {
         path: 'hotelAjout',
         element: <HotelAjout />
@@ -44,10 +32,22 @@ export const routes = [
         element: <RoomList />   
     },
     {
+        path: 'chambres',
+        element: <RoomList />   
+    },
+    {
+        path: 'roomAjout',
+        element: <RoomAjout />
+    },
+    {
         path: 'description/:idChambre',
         //dans votre <Link to ='/description/${id}'> 
         element: <RoomDescription/>,
         
+    },
+    {
+        path: 'reservation',
+        element: <Reservation />
     },
     {
         path: 'connexion',

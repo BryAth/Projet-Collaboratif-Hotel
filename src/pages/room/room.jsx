@@ -9,6 +9,7 @@ import RoomItem from './room-item';
 import { useParams } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
+import { Link } from 'react-router-dom';
 
 const Room = () => {
     
@@ -37,6 +38,7 @@ const Room = () => {
             <SearchBar />
             <div>
                 <h1 className={style.hotel}>Chambres</h1>
+                <Link to='/roomAjout'><button className={style.adminButton}>Ajouter une chambre</button></Link>
                 <div className={style.hotelframe}>
                     {listChambres.map(chambre => <RoomItem  key={chambre._id} {...chambre}/>)}
                 </div>

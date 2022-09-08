@@ -8,6 +8,7 @@
 import { Link } from 'react-router-dom';
 import style from './hotel-item.module.css'
 import axios from 'axios';
+
 const HotelItem = ({nom,etoiles,adresse,telephone,email,nombreChambres,piscine,voiturier,roomService,image, _id}) => {
 
     // ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -26,22 +27,20 @@ const HotelItem = ({nom,etoiles,adresse,telephone,email,nombreChambres,piscine,v
     return (
         <article className={style.blabla}>
             <Link to={`/chambres/${_id}`}>
-                <div>
-                    <img src={image} alt={nom} />
-                    <div className={style.description}>
-                        <p>{nom}</p>
-                        <p>{etoiles} étoiles</p>
-                        <p>Piscine : {piscine ? "Oui" : "Non"}</p>  
-                        <p>Voiturier : {voiturier ? "Oui" : "Non"}</p>            
-                        <p>Room service : {roomService ? "Oui" : "Non"}</p>
-                        <p>Adresse : {adresse.rue}, {adresse.numero}</p>
-                        <p>Code postal :  {adresse.CP}</p>
-                        <p>Pays :  {adresse.pays}</p>
-                        <p>Téléphone : {telephone}</p>
-                        <p>Email : {email}</p>
-                        <p>Nbres chambres : {nombreChambres}</p>
-                        <button>Voir les chambres</button>
-                    </div>
+                <img src={image} alt={nom} />
+                <div className={style.description}>
+                    <p>{nom}</p>
+                    <p>{etoiles} étoiles</p>
+                    <p>Piscine : {piscine ? "Oui" : "Non"}</p>  
+                    <p>Voiturier : {voiturier ? "Oui" : "Non"}</p>            
+                    <p>Room service : {roomService ? "Oui" : "Non"}</p>
+                    <p>Adresse : {adresse.rue}, {adresse.numero}</p>
+                    <p>Code postal :  {adresse.CP}</p>
+                    <p>Pays :  {adresse.pays}</p>
+                    <p>Téléphone : {telephone}</p>
+                    <p>Email : {email}</p>
+                    <p>Nbres chambres : {nombreChambres}</p>
+                    <button>Voir les chambres</button>
                 </div>
             </Link>
             {/* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */}
