@@ -5,6 +5,7 @@ import LoginPage from "./pages/login/login-page";
 import RegisterPage from "./pages/register/register-page";
 import NotFound from "./pages/errors/not-found";
 import RoomDescription from "./pages/room/room-description";
+import Reservation from "./pages/reservation/reservation";
 
 export const routes = [
     {
@@ -18,6 +19,11 @@ export const routes = [
     {
         path: 'hotels',
         element: <Hotel />
+    },
+
+    {
+        path: 'reservation',
+        element: <Reservation />
     },
     {
         path: 'chambres',

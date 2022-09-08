@@ -2,7 +2,8 @@
 
 import NavBar from '../../components/nav-bar/nav-bar';
 import SearchBar from '../../components/search-bar/search-bar';
-import style from './room-description.module.css'
+// import style from './room-description.module.css'
+import style from '../hotel/hotel.module.css'
 import chambres from '../../data/chambre.json'
 import RoomItem from './room-item';
 

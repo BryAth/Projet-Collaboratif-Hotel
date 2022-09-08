@@ -7,7 +7,8 @@
     padding: 0%;
     border-radius: 10px;
     box-shadow: 5px 5px 5px rgb(97, 97, 97);
-
+    border: 1px solid red;
+    /* display: flex;    */
 }
 
 .description{
@@ -19,10 +20,12 @@
     margin-left: 15px; 
     color: #212A30;
     
+    
 }
 
-p{
+.description p {
     margin: 0;
+   
 }
 
 img{

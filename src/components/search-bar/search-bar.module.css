@@ -1,6 +1,7 @@
 .searchDiv {
     position: fixed;
     top: 150px;
+    right: 840px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -8,8 +9,10 @@
     width: 30%;
     /* border: 1px solid red; */
     
+    
 }
 .searchDiv input {
+   
     height: 40px;
     width: 300px;
     background-color: white;

@@ -1,15 +1,18 @@
 import { Link } from 'react-router-dom';
 import style from '../hotel/hotel-item.module.css'
 
-const RoomItem= ({id,nomChambre,descriptionCourte,descriptionLongue,type,prix,salleDeBain,nombredeWc,options}) => {
+const RoomItem= ({image,id,nomChambre,descriptionCourte,descriptionLongue,type,prix,salleDeBain,nombredeWc,options}) => {
     return (
         //dans votre <Link to ='/description/${id}'> 
         //l artricle devra etrre pris dans un link
         <Link to ={`/description/${id}`}>
         <article className={style.blabla}>
-            {/* <img src={image} alt="Photo Hotel" /> */}
+            <img src={image} alt="Photo Hotel" />
             <div className={style.description}>
-            <p>{nomChambre}</p>
+            <h3>{nomChambre}</h3>
+            <p>{descriptionCourte}</p>
+
+            
             
             {/* <p>{etoiles} étoiles</p>
             <p>Piscine: {piscine}</p>
