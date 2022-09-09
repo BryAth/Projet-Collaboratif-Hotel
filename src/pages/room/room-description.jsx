@@ -10,10 +10,10 @@ const RoomDescription = ({}) => {
 
     const {idChambre} = useParams()
     const [chambre,setChambre]=useState({})
-// console.log(chambre[1].nomChambre);
+    // console.log(chambre[1].nomChambre);
     useEffect(()=>{
         setChambre(
-            chambres.find(c=>c.id==idChambre)
+            chambres.find(c => c.id === idChambre)
             )
         
     },[idChambre,chambre])
@@ -25,10 +25,10 @@ const RoomDescription = ({}) => {
             <div>
                 <h1 className={style.chambre}>Description</h1>
                 <div className={style.roomframe}>
-                   <div className={style.nomChambre}>
-                    <img src={chambre.image} alt="Photo Chambre" className={style.imgChambre} />
+                    <div className={style.nomChambre}>
+                        <img src={chambre.image} alt="Photo Chambre" className={style.imgChambre} />
                         <p>Description: {chambre.descriptionCourte}</p>
-                        </div>
+                    </div>
                     <div className={style.description}>
                         <p>Nom: {chambre.nomChambre}</p>
                         <p>Type: {chambre.type}</p>
@@ -39,9 +39,7 @@ const RoomDescription = ({}) => {
                         <p>Type: {chambre.type}</p>
                         {/* <p>{chambre.options}</p> */}
                         <p>Description: {chambre.descriptionLongue}</p>
-
                         <Link to ='/reservation'><button type="submit"  class={style.reserver} >Reservation</button></Link>
-
                     </div>
                 </div>
             </div>

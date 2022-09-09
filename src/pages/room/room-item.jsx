@@ -8,7 +8,9 @@ const RoomItem= ({image,_id,nom,descriptionCourte,prix,nombreDePersonnes}) => {
         console.log(_id, nom);     
         // axios.delete('http://localhost:8080/api/chambres', id)
         axios.delete(`http://localhost:8080/api/chambres/${_id}`)
-            .then()
+            .then(function(response){
+                console.log(response);
+            })
             .catch()
     }
 
@@ -23,12 +25,12 @@ const RoomItem= ({image,_id,nom,descriptionCourte,prix,nombreDePersonnes}) => {
                     <p>Nombre de personnes : {nombreDePersonnes}</p>
                     <p>Prix : {prix} € / nuit</p>
                 </div>
-        </Link> 
-        <div className={style.adminButtonRoomItem}>
-            <button>Modifier l'hôtel</button>
-            <button type="submit" onClick={onDelete}>Supprimer l'hôtel</button>
-        </div>
-    </article>
+            </Link> 
+            <div className={style.adminButtonRoomItem}>
+                <button>Modifier la chambre</button>
+                <button type="submit" onClick={onDelete}>Supprimer la chambre</button>
+            </div>
+        </article>
     );
 };
 

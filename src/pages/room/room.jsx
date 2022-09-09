@@ -18,7 +18,7 @@ const Room = () => {
     const [listChambres, setListChambres] = useState([]);
 
     useEffect(() => {
-        // console.log(idHotel);
+        
         // console.log(chambres.filter(c => c.hotel === idHotel));
         // TODO: requête axios à la place du filter
         // let newList = listChambres.filter(c => c.hotel === idHotel);    
@@ -28,6 +28,7 @@ const Room = () => {
             .then((response) => {
                 console.log(response);
                 setListChambres(response.data.chambres);
+                
             })
     
     }, [idHotel]);
@@ -45,6 +46,7 @@ const Room = () => {
 
                 
             </div>
+            
         </div>
     );
 };

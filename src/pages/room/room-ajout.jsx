@@ -6,6 +6,8 @@ import { useNavigate } from 'react-router-dom';
 
 const RoomAjout = () => {
 
+    // const {idHotel} = useParams()
+
     const { handleSubmit, register } = useForm();
     const navigate = useNavigate();
     const onRegisterRoom = (data) => {
@@ -15,6 +17,7 @@ const RoomAjout = () => {
             .then(function (response) {
                 // console.log(response);
                 navigate('/chambres')
+                // navigate(`/chambres/${_id}`)
             })
             .catch(function (error) {
                 // console.log(error);
@@ -30,7 +33,7 @@ const RoomAjout = () => {
                     <input id="nom" type="text" placeholder="Nom de la chambre" {...register('nom')} />
                     <input id="descriptionCourte" type="text" placeholder="Description courte" {...register('descriptionCourte')} />
                     <input id="descriptionLongue" type="text" placeholder="Description longue" {...register('descriptionLongue')} />
-                    <input id="hotel" type="text" placeholder="Hôtel" {...register('hotel')} />
+                    <input id="hotel" type="text" placeholder="Identifiant hôtel" {...register('hotel')} />
                     <input id="type" type="text" placeholder="Type" {...register('type')} />
                     <input id="nombreDePersonnes" type="number" placeholder="Nombre de personnes" {...register('nombreDePersonnes')} />
                     <input id="prix" type="number" placeholder="Prix en euros" {...register('prix')} />
@@ -75,8 +78,8 @@ const RoomAjout = () => {
                             <input id="chambrestatus" type="checkbox" {...register('chambrestatus')} />
                         </div>
                     </article>
-                    <input id="dateDebut" type="text" placeholder="Date début réservation"  {...register('dateDebut')} />
-                    <input id="dateFin" type="text" placeholder="Date fin réservation"  {...register('dateFin')} />
+                    {/* <input id="dateDebut" type="text" placeholder="Date début réservation"  {...register('dateDebut')} /> */}
+                    {/* <input id="dateFin" type="text" placeholder="Date fin réservation"  {...register('dateFin')} /> */}
                     <input id="image" type="text" placeholder="URL image"  {...register('image')} />
                     
                     {/* <Link to ='/hotels'><button type="submit">Ajouter</button></Link> */}
