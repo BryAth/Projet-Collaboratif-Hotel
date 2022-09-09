@@ -1,24 +1,29 @@
 .searchDiv {
     position: fixed;
     top: 150px;
-    right: 840px;
-    display: flex;
+    left: 0;
+    /* display: flex;
     justify-content: center;
-    align-items: center;
-    height: 60px;
-    width: 30%;
+    align-items: center; */
+    height: 100px;
+    /* width: 300px; */
     /* border: 1px solid red; */
-    
-    
+    /* width: 100%; */
+    margin: auto;
+
+
 }
+
+
+
 .searchDiv input {
-   
+
     height: 40px;
-    width: 300px;
+    width: 200px;
     background-color: white;
     color: black;
     font-size: 1.5rem;
-    margin: 20px;
+    /* margin: 20px; */
     padding-left: 10px;
     box-shadow: 5px 5px 5px rgb(97, 97, 97);
     border-radius: 10px;
@@ -29,7 +34,7 @@
 }
 
 .searchDiv button {
-    width: 200px;
+    width: 120px;
     height: 40px;
     font-size: 1.5rem;
     border-radius: 5px;
@@ -40,4 +45,3 @@
 
 
 }
-

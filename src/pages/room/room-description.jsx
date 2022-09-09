@@ -1,22 +1,33 @@
 import NavBar from "../../components/nav-bar/nav-bar";
 import SearchBar from "../../components/search-bar/search-bar";
 import style from '../room/room-description.module.css'
-import chambres from '../../data/chambre.json'
+// import chambres from '../../data/chambre.json'
 import { useParams } from "react-router-dom";
-import { useEffect,useState} from "react";
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import axios from "axios";
 
-const RoomDescription = ({}) => {
+const RoomDescription = ({ }) => {
 
-    const {idChambre} = useParams()
-    const [chambre,setChambre]=useState({})
+    const { idChambre } = useParams()
+    const [chambre, setChambre] = useState({})
     // console.log(chambre[1].nomChambre);
-    useEffect(()=>{
-        setChambre(
-            chambres.find(c => c.id === idChambre)
-            )
-        
-    },[idChambre,chambre])
+
+    useEffect(() => {
+
+        // console.log(chambres.filter(c => c.hotel === idHotel));
+        // TODO: requête axios à la place du filter
+        // let newList = listChambres.filter(c => c.hotel === idHotel);    
+        // setListChambres(newList)
+
+        axios.get(`http://localhost:8080/api/chambres/${idChambre}`)
+            .then((response) => {
+                console.log(response);
+                setChambre(response.data);
+
+            })
+
+    }, [idChambre]);
 
     return (
         <div className={style.ensembleChambre} >
@@ -39,7 +50,7 @@ const RoomDescription = ({}) => {
                         <p>Type: {chambre.type}</p>
                         {/* <p>{chambre.options}</p> */}
                         <p>Description: {chambre.descriptionLongue}</p>
-                        <Link to ='/reservation'><button type="submit"  class={style.reserver} >Reservation</button></Link>
+                        <Link to='/reservation'><button type="submit" className={style.reserver} >Reservation</button></Link>
                     </div>
                 </div>
             </div>

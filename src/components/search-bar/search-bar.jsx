@@ -8,7 +8,7 @@ const SearchBar = () => {
 
     const { handleSubmit, reset, register } = useForm();
     const dispatch = useDispatch();
-    
+
     const handleCountry = (data) => {
         // console.log(data);
         // console.log(data.country);
@@ -21,14 +21,14 @@ const SearchBar = () => {
     }
 
     return (
-        <form onSubmit={handleSubmit(handleCountry)}>
+        <form onSubmit={handleSubmit(handleCountry)} className={style.searchDivGeneral}>
             <div className={style.searchDiv}>
                 <input id="country" type="text" placeholder="Pays,Ville..." {...register('country')} />
                 <button type='submit'>Chercher</button>
                 <button type='button' onClick={resetCountry}>Reset</button>
             </div>
         </form>
-        
+
     );
 };
 

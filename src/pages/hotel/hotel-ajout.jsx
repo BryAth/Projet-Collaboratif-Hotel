@@ -25,10 +25,10 @@ const HotelAjout = () => {
             });
 
     }
-    
+
     return (
         <>
-            <div  className={style.loginContainer}>
+            <div className={style.loginContainer}>
                 <form onSubmit={handleSubmit(onRegisterHotel)}>
                     <h1>Ajouter un hôtel</h1>
                     <input id="nom" type="text" placeholder="Nom de l'hôtel" {...register('nom')} />
@@ -55,7 +55,7 @@ const HotelAjout = () => {
                         </div>
                     </article>
                     <input id="image" type="text" placeholder="URL image"  {...register('image')} />
-                    
+
                     {/* <Link to ='/hotels'><button type="submit">Ajouter</button></Link> */}
 
                     <button type='submit'>Ajouter</button>

@@ -1,20 +1,24 @@
-.hotel{
-    margin-top: 250px;
-    margin-left: 150px;
+.hotel {
+    margin-top: 150px;
+    /* margin-left: 150px; */
     /* text-decoration: underline; */
+    /* border: 1px solid red; */
+    text-align: center;
 }
 
-.ensemblehotel{
+.ensemblehotel {
     display: flex;
     justify-content: center;
-    
-    
+    /* overflow: hidden;
+    border: 1px solid red; */
+
+
 }
 
 
 
 
-.hotelframe{
+.hotelframe {
     margin-top: 100px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -27,9 +31,9 @@
     height: 600px;
     height: 773px;
     scroll-behavior: smooth;
-    
-    
-    
+
+
+
 }
 
 .hotelframe::-webkit-scrollbar {

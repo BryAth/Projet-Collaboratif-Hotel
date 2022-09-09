@@ -8,8 +8,8 @@ const NavBar = () => {
         <nav className={style.nav}>
             <Logo />
             <LoginRegister />
-            <Link to='/hotels'><button>Tous les hôtels</button></Link>
-            <Link to='/a-propos'><button>A propos</button></Link>
+            <Link to='/hotels' ><button className={style.bla}>Tous les hôtels</button></Link>
+
         </nav>
     );
 };
