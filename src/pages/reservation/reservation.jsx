@@ -12,17 +12,17 @@ const Reservation = () => {
                     <p>Date</p>
                     <input type="date" className={style.calendrier} />
 
-                    <div class={style.dropdown}>
-                        <button class={style.dropbtn}>Assurance</button>
-                        <div class={style.dropdownContent}>
+                    <div className={style.dropdown}>
+                        <button className={style.dropbtn}>Assurance</button>
+                        <div className={style.dropdownContent}>
                             <a href="#">Oui</a>
                             <a href="#">Non</a>
                         </div>
                     </div>
 
                     {/* <Link to ='/connexion'><button type="submit"  class={style.connexionReservation} >Connexion</button></Link> */}
-                   
-                    <Link to ='/a-propos'> <button type="submit"  class={style.connexionReservation} >Valider</button></Link>
+
+                    <Link to='/a-propos'> <button type="submit" className={style.connexionReservation} >Valider</button></Link>
                 </div>
             </article>
 
