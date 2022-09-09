@@ -45,7 +45,7 @@ const HotelItem = ({nom,etoiles,adresse,telephone,email,nombreChambres,piscine,v
             </Link>
             {/* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */}
             <div className={style.adminButton}>
-                <button>Modifier l'hôtel</button>
+                <Link to={`/hotelModification/${_id}`}><button>Modifier l'hôtel</button></Link>
                 <button type="submit" onClick={onDelete}>Supprimer l'hôtel</button>
             </div>
             {/* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */}

@@ -39,7 +39,7 @@ const Room = () => {
             <SearchBar />
             <div>
                 <h1 className={style.hotel}>Chambres</h1>
-                <Link to='/roomAjout'><button className={style.adminButton}>Ajouter une chambre</button></Link>
+                <Link to={`/roomAjout/${idHotel}`}><button className={style.adminButton}>Ajouter une chambre</button></Link>
                 <div className={style.hotelframe}>
                     {listChambres.map(chambre => <RoomItem  key={chambre._id} {...chambre}/>)}
                 </div>

@@ -27,7 +27,7 @@ const RoomItem= ({image,_id,nom,descriptionCourte,prix,nombreDePersonnes}) => {
                 </div>
             </Link> 
             <div className={style.adminButtonRoomItem}>
-                <button>Modifier la chambre</button>
+                <Link to={`/chambreModification/${_id}`}><button>Modifier la chambre</button></Link>
                 <button type="submit" onClick={onDelete}>Supprimer la chambre</button>
             </div>
         </article>

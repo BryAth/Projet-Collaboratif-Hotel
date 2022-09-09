@@ -8,6 +8,8 @@ import RoomDescription from "./pages/room/room-description";
 import HotelAjout from "./pages/hotel/hotel-ajout";
 import Reservation from "./pages/reservation/reservation"
 import RoomAjout from "./pages/room/room-ajout";
+import HotelModification from "./pages/hotel/hotel-modification";
+import ChambreModification from "./pages/room/room-modification";
 
 
 export const routes = [
@@ -28,6 +30,10 @@ export const routes = [
         element: <HotelAjout />
     },
     {
+        path: 'hotelModification/:idHotel',
+        element: <HotelModification />
+    },
+    {
         path: 'chambres/:idHotel',
         element: <RoomList />   
     },
@@ -36,8 +42,12 @@ export const routes = [
         element: <RoomList />   
     },
     {
-        path: 'roomAjout',
+        path: 'roomAjout/:idHotel',
         element: <RoomAjout />
+    },
+    {
+        path: 'chambreModification/:idChambre',
+        element: <ChambreModification />
     },
     {
         path: 'description/:idChambre',

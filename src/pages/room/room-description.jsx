@@ -8,8 +8,8 @@ import { Link } from "react-router-dom";
 
 const RoomDescription = ({}) => {
 
-    const {idChambre} = useParams()
-    const [chambre,setChambre]=useState({})
+    const {idChambre} = useParams();
+    const [chambre,setChambre]=useState({});
     // console.log(chambre[1].nomChambre);
     useEffect(()=>{
         setChambre(

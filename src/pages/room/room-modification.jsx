@@ -3,26 +3,42 @@ import axios from 'axios';
 
 import style from '../hotel/hotel-ajout.module.css';
 import { useNavigate, useParams } from 'react-router-dom';
+import { useEffect, useState } from 'react';
 
-const RoomAjout = () => {
 
-    const { idHotel } = useParams();
+const ChambreModification = () => {
 
-    const { handleSubmit, register } = useForm();
+    const {idChambre} = useParams();
+    const [idHotel, setIdHotel] = useState('');
+    const { handleSubmit, register, setValue } = useForm();
+
+    useEffect(() => {
+        axios.put(`http://localhost:8080/api/chambres/${idChambre}`)
+        .then(function(response){
+            console.log(response);
+            setIdHotel(response.data.hotel)
+  
+            const inputModification = ['nom', 'descriptionCourte', 'descriptionLongue', 'type', 'nombreDePersonnes', 'prix', 'salleDeBain', 'nombreDeWc', 'image' ];
+            const inputOptions = ['balcon', 'airConditione', 'wifi', 'minibar', 'animaux', 'tv', 'dejeuner', 'chambrestatus'];
+            inputOptions.forEach(input => {setValue(`options.${input}`, response.data.options[input])});
+            inputModification.forEach(input => {setValue(input, response.data[input])})
+            // setValue('nom', response.data.nom)
+            // setValue('nom', response.data['nom'])
+        })
+    }, [idChambre, setValue])
+
+    
     const navigate = useNavigate();
-    const onRegisterRoom = (data) => {
-        console.log(data);    // data contient tout ce qu'il y a dans register
-        data.hotel = idHotel;
-        console.log(data);
+    const onRegisterChambreModification = (data) => {
+        // console.log(data);    // data contient tout ce qu'il y a dans register
 
-        axios.post('http://localhost:8080/api/chambres', data)
+        axios.put(`http://localhost:8080/api/chambres/${idChambre}`, data)
             .then(function (response) {
-                // console.log(response);
-                navigate(`/chambres/${idHotel}`);
-                // navigate(`/chambres/${_id}`)
+                console.log(response);
+                navigate(`/chambres/${idHotel}`)
             })
             .catch(function (error) {
-                // console.log(error);
+                console.log(error);
             });
 
     }
@@ -30,8 +46,8 @@ const RoomAjout = () => {
     return (
         <>
             <div  className={style.loginContainer}>
-                <form onSubmit={handleSubmit(onRegisterRoom)}>
-                    <h1>Ajouter une chambre</h1>
+                <form onSubmit={handleSubmit(onRegisterChambreModification)}>
+                    <h1>Modifier une chambre</h1>
                     <input id="nom" type="text" placeholder="Nom de la chambre" {...register('nom')} />
                     <input id="descriptionCourte" type="text" placeholder="Description courte" {...register('descriptionCourte')} />
                     <input id="descriptionLongue" type="text" placeholder="Description longue" {...register('descriptionLongue')} />
@@ -86,7 +102,7 @@ const RoomAjout = () => {
                     
                     {/* <Link to ='/hotels'><button type="submit">Ajouter</button></Link> */}
 
-                    <button type='submit'>Ajouter</button>
+                    <button type='submit'>Modifier</button>
 
                     {/* {errorMsg && (
                         <p>{errorMsg}</p>
@@ -97,4 +113,4 @@ const RoomAjout = () => {
     );
 };
 
-export default RoomAjout;
+export default ChambreModification;
